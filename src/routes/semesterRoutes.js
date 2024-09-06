@@ -1,9 +1,11 @@
 const { Router } = require("express")
-const { getSemestersById } = require('../controllers/semesterController')
+const { getSemesterById, getSemestersStudentById } = require('../controllers/semesterController')
 
 
 const router = Router()
 
-router.get("/:id", getSemestersById)
+router.get('/:id', getSemesterById)
+
+router.get("/student/:id", getSemestersStudentById)
 
 module.exports = router
