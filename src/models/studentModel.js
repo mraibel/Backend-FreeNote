@@ -26,7 +26,13 @@ const Student = sequelize.define('student', {
         allowNull: false
     }
 }, {
-    timestamps:false
+    timestamps:false,
+    indexes: [
+        {
+            unique: true,
+            fields: ["email"]
+        }
+    ]
 })
 
 module.exports = Student
